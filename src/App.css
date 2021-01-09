@@ -1,38 +1,90 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(252, 247, 151);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input{
+  border: 1px solid;
+  height: 23px;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  width: 26.5px;
+  height: 26.5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add{
+  border: 1px solid rgb(252, 205, 15);
+  background-color: rgb(255, 220, 79);
+  margin-left: 5px;
+  margin-right: 20px;
+}
+
+.add:hover{
+  border: 1px solid rgb(255, 220, 79);
+  background-color: rgb(252, 205, 15);
+}
+
+select{
+  position: relative;
+  top: 0.5px;
+  height: 26.7px;
+}
+
+form{
+  margin-top: 50px;
+}
+
+.todo-container{
+  margin-top: 60px;
+}
+
+.todo{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(255, 255, 219);
+  width: 400px;
+  height: 38px;
+  margin: auto;
+  border-top: rgb(240, 240, 237) 1px solid;
+}
+
+li{
+  display: inline-block;
+  list-style: none;
+  width: 200px;
+  background-color: inherit;
+}
+
+.todo-completed{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.check{
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgb(0, 250, 104);
   color: white;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.check:hover{
+  background-color:  rgb(0, 209, 87);
+  color:white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.remove{
+  background-color: rgb(255, 43, 100);
+  color: white;
+  border: none;
+}
+
+.remove:hover{
+  background-color: rgb(222, 40, 89);
+  color:white;
 }
