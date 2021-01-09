@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import './App.css';
 import Form from "./components/Form.js";
 import TodoList from "./components/TodoList.js";
@@ -7,6 +7,27 @@ function App() {
   const [inputText, setInputText] = useState("");
   const [todoList, setTodoList] = useState([]);
   const [filterOpt, setFilterOpt] = useState("All");
+  
+  useEffect(()=>{
+    getTodoList();
+  },[]);
+
+  useEffect(()=>{
+    saveTodoList();
+  },[todoList]);
+
+  function saveTodoList(){
+    if(localStorage.getItem("maintainTodoList") == null){
+      localStorage.setItem("maintainTodoList",JSON.stringify([]));
+    }
+    else{
+      localStorage.setItem("maintainTodoList",JSON.stringify(todoList));
+    }
+  }
+
+  function getTodoList(){
+    setTodoList(JSON.parse(localStorage.getItem("maintainTodoList")));
+  }
 
   return (
     <div className="App">
