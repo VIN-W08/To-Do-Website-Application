@@ -16,6 +16,7 @@ function App() {
     saveTodoList();
   },[todoList]);
 
+
   function saveTodoList(){
     if(localStorage.getItem("maintainTodoList") == null){
       localStorage.setItem("maintainTodoList",JSON.stringify([]));
