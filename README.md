@@ -1,3 +1,8 @@
+# To Do Website Application
+To Do Website Application is a website application that allows user to write and add to do task to a list, and mark whether a task is completed or uncompleted.
+
+## --------------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
